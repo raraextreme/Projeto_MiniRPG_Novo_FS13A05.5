@@ -41,16 +41,16 @@ function iniciarJogo() {
         
         if (tipo === "1") {
           personagem.ataque += 5;
-          console.log(`\n⬆️ Ataque aumentado para ${personagem.ataque}`);
+          console.log(`\n Ataque aumentado para ${personagem.ataque}`);
         } 
         else if (tipo === "2") {
           personagem.defesa += 3;
-          console.log(`\n⬆️ Defesa aumentada para ${personagem.defesa}`);
+          console.log(`\n Defesa aumentada para ${personagem.defesa}`);
         }
       } 
       else if (acao === "1") {
         if (personagem.ataque >= faseAtual.reqAtk && personagem.defesa >= faseAtual.reqDef) {
-          console.log(`\n✅ VITÓRIA! Você venceu ${faseAtual.nome} com seus atributos atuais.`);
+          console.log(`\n VITÓRIA! Você venceu ${faseAtual.nome} com seus atributos atuais.`);
           alert(`Parabéns, ${personagem.nome}! Você superou ${faseAtual.nome}.`);
           venceuFase = true; 
         } 
@@ -58,7 +58,7 @@ function iniciarJogo() {
           let faltaAtk = Math.max(0, faseAtual.reqAtk - personagem.ataque);
           let faltaDef = Math.max(0, faseAtual.reqDef - personagem.defesa);
 
-          console.log(`\n❌ VOCÊ PERDEU! Seus atributos são insuficientes para o desafio.`);
+          console.log(`\n VOCÊ PERDEU! Seus atributos são insuficientes para o desafio.`);
           if (faltaAtk > 0) console.log(`Faltam ${faltaAtk} de Ataque.`);
           if (faltaDef > 0) console.log(`Faltam ${faltaDef} de Defesa.`);
 
